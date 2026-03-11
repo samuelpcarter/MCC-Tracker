@@ -68,11 +68,11 @@ classDiagram
 
 
    class DietTracker {
-       + DEFAULT_FOOD : String = "None"$
+       + DEFAULT_FOOD : String = "Water"$
        + DEFAULT_CALORIES : int = 0$
        + DEFAULT_PROTEIN : double = 0.0$
-       + DEFAULT_IS_SINGLE : boolean = true$
-       + DEFAULT_GOAL : String = "Maintenance"$
+       + DEFAULT_IS_SINGLE : boolean = false$
+       + DEFAULT_GOAL : String = "Stay hydrated"$
        - foodName : String
        - calories : int
        - protein : double
