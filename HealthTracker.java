@@ -2,7 +2,7 @@
  * CLASS INVARIANT
  * - height must be in total inches
  */
-public class HealthTracker {
+public abstract class HealthTracker {
     // constants
     public static final double DEFAULT_WEIGHT = 100;
     public static final int DEFAULT_HEIGHT = 100;
@@ -104,4 +104,6 @@ public class HealthTracker {
         }
 
     }
+
+    public abstract void printEncouragingMessage();
 }
