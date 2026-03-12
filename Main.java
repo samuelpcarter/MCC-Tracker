@@ -1,7 +1,7 @@
 public class Main {
     public static void main(String[] args) {
-        HealthTracker tester = new HealthTracker();
-        HealthTracker copyOfTester = new HealthTracker(tester); //DEEP COPY!!
+        DietTracker tester = new DietTracker();
+        DietTracker copyOfTester = new DietTracker(tester); // DEEP COPY!!
         //HealthTracker copyOfTester = tester; //SHALLOW COPY!!
 
         System.out.println("Start = " + tester);
@@ -18,8 +18,11 @@ public class Main {
 
         DietTracker myDiet = new DietTracker();
         myDiet.setProtein(0);
+        myDiet.setCalories(150);
+        myDiet.setToSingleMeal();
 
         System.out.println("My diet tracker = " + myDiet);
+        myDiet.printEncouragingMessage();
     }
 
     // public static void testSetWeight() {

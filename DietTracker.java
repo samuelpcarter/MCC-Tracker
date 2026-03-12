@@ -137,4 +137,25 @@ public class DietTracker extends HealthTracker {
                 this.protein + ", is single meal? " + this.isSingleMeal +
                 " with goal of " + this.goal;
     }
+
+    @Override
+    public void printEncouragingMessage() {
+        if (this.isSingleMeal) {
+            // check for total meal alories
+            if (this.calories > 400) {
+                System.out.println(
+                        "Great job tracking! Meal calories are a little high, what can you do to burn or reduce next meals calories?");
+            } else {
+                System.out.println("Awesome! you're on track for your per meal calories!");
+            }
+        } else {
+            // check for average calories for one thing of meal
+            if (this.calories > 100) {
+                System.out.println(
+                        "This item has more than the average calories, what if the other meal items balance it out?");
+            } else {
+                System.out.println("Great job! This will really help balance out your total meal calories!");
+            }
+        }
+    }
 }
