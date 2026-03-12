@@ -15,9 +15,8 @@ public abstract class HealthTracker {
     public HealthTracker(double weight, int height) {
         boolean isValid = this.setWeight(weight) && this.setHeight(height);
         if (!isValid) {
-            // handle error
-            System.out.println("ERROR: bad data given to constructor");
-            System.exit(0);
+            // throw error (checking)
+            throw new IllegalArgumentException("ERROR: bad data given to HealthTracker full constructor");
         }
     }
 
@@ -27,9 +26,8 @@ public abstract class HealthTracker {
 
     public HealthTracker(HealthTracker original) {
         if (original == null) {
-            // handle error
-            System.out.println("ERROR: null given to copy constructor");
-            System.exit(0);
+            // throw error (checking)
+            throw new IllegalArgumentException("ERROR: null given to HealthTracker copy constructor");
         }
         this.weight = original.weight;
         this.height = original.height;

@@ -23,8 +23,7 @@ public class DietTracker extends HealthTracker {
         if (!this.setFoodName(foodName) || !this.setCalories(calories)
                 || !this.setProtein(protein) || !this.setIsSingleMeal(isSingleMeal)
                 || !this.setGoal(goal)) {
-            System.out.println("ERROR: bad data given to full DietTracker constructor");
-            System.exit(0);
+            throw new IllegalArgumentException("ERROR: bad data given to full DietTracker constructor");
         }
 
     }
@@ -46,8 +45,7 @@ public class DietTracker extends HealthTracker {
             this.setIsSingleMeal(original.isSingleMeal);
             this.setGoal(original.goal);
         } else {
-            System.out.println("ERROR: null given to copy DietTracker constructor");
-            System.exit(0);
+            throw new IllegalArgumentException("ERROR: null given to copy DietTracker constructor");
         }
     }
 
