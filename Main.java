@@ -23,6 +23,25 @@ public class Main {
 
         System.out.println("My diet tracker = " + myDiet);
         myDiet.printEncouragingMessage();
+
+        // exception tests
+        // error handling for full constructor
+        try {
+            // HealthTracker exceptionTest = new HealthTracker(0, 0);
+            /*
+             * double weight, int height,
+             * String foodName, int calories, double protein,
+             * boolean isSingleMeal, String goal
+             */
+            DietTracker exceptionTest = new DietTracker(100, 100,
+                    "Cheese", -100, 5.3, false, "snack to avoid eating candy");
+            System.out.println("no error for exception test! Here is the object: " + exceptionTest);
+        } catch (IllegalArgumentException iae) {
+            System.out.println(iae.getMessage() + ". fix code and run again");
+        }
+
+        System.out.println("!!!!reached the end!!");
+
     }
 
     // public static void testSetWeight() {
